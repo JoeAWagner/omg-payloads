@@ -101,7 +101,7 @@ function Get-GeoLocation{
 
 .NOTES 
 	This is to pause the script until a mouse movement is detected
-
+#>
 
 function Pause-Script{
 Add-Type -AssemblyName System.Windows.Forms
@@ -118,7 +118,7 @@ $o=New-Object -ComObject WScript.Shell
         }
     }
 }
-#>
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 $GL = Get-GeoLocation
@@ -129,7 +129,7 @@ $Lat = $GL[0].Substring(11) -replace ".$"
 
 $Lon = $GL[1].Substring(10) -replace ".$"
 
-Pause-Script
+# Pause-Script
 
 # Opens their browser with a map of their current location
 
